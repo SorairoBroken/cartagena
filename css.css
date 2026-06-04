@@ -1,0 +1,320 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+body{
+  background:#f4f1ea;
+  color:#222;
+  padding:40px;
+}
+
+/* HEADER */
+
+header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.logo-banner{
+  display:block;
+  width:100%;
+  max-width:395px;
+  height:auto;
+  margin:0 auto 15px auto;
+}
+
+header h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+header p{
+  color:#555;
+  font-size:1.1rem;
+  max-width:700px;
+}
+
+/* BANNER */
+
+.banner{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin:20px 0;
+}
+
+.banner img{
+  width:100%;
+  max-width:1200px;
+  height:auto;
+  display:block;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* PROGRESS */
+
+.progress-container{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:40px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.progress-bar{
+  width:100%;
+  height:20px;
+  background:#ddd;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:10px;
+}
+
+.progress{
+  height:100%;
+  width:0%;
+  background:#111;
+  transition:0.4s;
+}
+
+/* ALBUM */
+
+.album{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:25px;
+}
+/* CARDS */
+
+.stamp-card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+  position:relative;
+}
+
+.stamp-card:hover{
+  transform:translateY(-5px);
+}
+
+.card-image{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:20px;
+}
+
+.card-content h2{
+  margin-bottom:10px;
+}
+
+.card-content p{
+  color:#666;
+  margin-bottom:20px;
+  line-height:1.5;
+}
+
+/* STATUS */
+
+.status{
+  margin-bottom:15px;
+  font-weight:bold;
+}
+
+.locked{
+  color:#999;
+}
+
+.unlocked{
+  color:#0f9d58;
+}
+
+/* STAMP */
+
+.stamp{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:#0f9d58;
+  color:white;
+  padding:8px 14px;
+  border-radius:50px;
+  font-size:0.8rem;
+  display:none;
+}
+
+.completed .stamp{
+  display:block;
+}
+
+/* BUTTONS */
+
+button{
+  border:none;
+  background:#111;
+  color:white;
+  padding:12px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+button:hover{
+  background:#333;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.register-btn{
+  background:#111;
+}
+
+.register-btn:hover{
+  background:#333;
+}
+
+.remove-btn{
+  background:#b3261e;
+}
+
+.remove-btn:hover{
+  background:#8c1d18;
+}
+
+/* ACTIONS */
+
+.actions{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:30px 0;
+  flex-wrap:wrap;
+}
+
+.support-btn{
+  background:#f2bb53;
+}
+
+.support-btn:hover{
+  background:#b68936;
+}
+
+.reset-btn{
+  background:#20924d;
+}
+
+.reset-btn:hover{
+  background:#165e33;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+  body{
+    padding:15px;
+  }
+
+  header h1{
+    font-size:2rem;
+  }
+
+  header p{
+    font-size:1rem;
+  }
+
+  .logo-banner{
+    width:90%;
+    max-width:395px;
+  }
+
+  .album{
+    grid-template-columns:1fr;
+  }
+
+  .card-image{
+    height:200px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .buttons button{
+    width:100%;
+  }
+
+  .actions{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .actions button{
+    width:100%;
+    max-width:300px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  body{
+    padding:10px;
+  }
+
+  header h1{
+    font-size:1.7rem;
+  }
+
+  .progress-container{
+    padding:15px;
+  }
+
+  .card-content{
+    padding:15px;
+  }
+
+  .card-image{
+    height:180px;
+  }
+
+}
+
+@media (max-width:1200px){
+
+  .album{
+    grid-template-columns:repeat(3, 1fr);
+  }
+
+}
+
+@media (max-width:768px){
+
+  .album{
+    grid-template-columns:1fr;
+  }
+
+}

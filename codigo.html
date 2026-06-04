@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cartagena</title>
+
+  <link rel="stylesheet" href="css.css">
+
+</head>
+
+<body>
+
+  <header>
+<header>
+
+  <img
+    src="imagenes/CTG L2.png"
+    alt="Cartagena"
+    class="logo-banner">
+
+  <p>
+    Descubre la Cartagena que no siempre se ve.
+  </p>
+
+</header>
+
+  </header>
+
+  <section class="progress-container">
+
+    <h3>Progreso del álbum</h3>
+
+    <div class="progress-bar">
+
+      <div class="progress" id="progress"></div>
+
+    </div>
+
+    <p id="progress-text">
+      0/10 lugares visitados
+    </p>
+
+  </section>
+
+  <section class="album">
+
+    <!-- GETSEMANÍ -->
+
+    <div class="stamp-card" id="getsemani">
+
+      <img src="imagenes/Getsemaní.jpg"
+      alt="Getsemaní"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Getsemaní</h2>
+
+        <p>
+          Cultura urbana, arte y transformación social.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('getsemani')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('getsemani')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SAN FELIPE -->
+
+    <div class="stamp-card" id="sanfelipe">
+
+      <img src="imagenes/Castillo San Felipe.jpg"
+      alt="San Felipe"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Castillo de San Felipe</h2>
+
+        <p>
+          Historia y memoria de Cartagena.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('sanfelipe')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('sanfelipe')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- LA POPA -->
+
+    <div class="stamp-card" id="lapopa">
+
+      <img src="imagenes/La Popa.jpg"
+      alt="La Popa"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Cerro de La Popa</h2>
+
+        <p>
+          Vista panorámica e historia del territorio.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('lapopa')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('lapopa')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- LA BOQUILLA -->
+
+    <div class="stamp-card" id="boquilla">
+
+      <img src="imagenes/Boquilla1.png"
+      alt="La Boquilla"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>La Boquilla</h2>
+
+        <p>
+          Comunidad, tradición y relación con el mar.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('boquilla')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('boquilla')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- MANGLARES -->
+
+    <div class="stamp-card" id="manglares">
+
+      <img src="imagenes/manglares.jpg"
+      alt="Manglares"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Manglares</h2>
+
+        <p>
+          Ecosistemas naturales y biodiversidad.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('manglares')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('manglares')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BAZURTO -->
+
+    <div class="stamp-card" id="bazurto">
+
+      <img src="imagenes/bazurto.jpg"
+      alt="Bazurto"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Bazurto</h2>
+
+        <p>
+          Gastronomía y cultura popular cartagenera.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('bazurto')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('bazurto')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TORRE DEL RELOJ -->
+
+    <div class="stamp-card" id="torredelreloj">
+
+      <img src="imagenes/Torre del Reloj.jpeg"
+      alt="Torre del Reloj"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Torre del Reloj</h2>
+
+        <p>
+          Entrada histórica y símbolo urbano.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('torredelreloj')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('torredelreloj')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- MURALLAS -->
+
+    <div class="stamp-card" id="murallas">
+
+      <img src="imagenes/murallas.jpg"
+      alt="Murallas"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Murallas</h2>
+
+        <p>
+          Patrimonio e historia de la ciudad.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('murallas')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('murallas')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ISLAS -->
+
+    <div class="stamp-card" id="islas">
+
+      <img src="imagenes/islas.jpg"
+      alt="Islas del Rosario"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Islas del Rosario</h2>
+
+        <p>
+          Naturaleza y conexión con el Caribe.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('islas')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('islas')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CHAMPETA -->
+
+    <div class="stamp-card" id="champeta">
+
+      <img src="imagenes/Champeta.png"
+      alt="Champeta"
+      class="card-image">
+
+      <div class="stamp">Visitado</div>
+
+      <div class="card-content">
+
+        <h2>Ruta de la Champeta</h2>
+
+        <p>
+          Música, identidad y cultura viva.
+        </p>
+
+        <div class="status locked">
+          No visitado
+        </div>
+
+        <div class="buttons">
+          <button class="register-btn" onclick="unlockStamp('champeta')">
+            Registrar visita
+          </button>
+
+          <button class="remove-btn" onclick="removeStamp('champeta')">
+            Quitar visita
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="actions">
+
+  <button class="support-btn" onclick="showSupport()">
+    Ayuda y Soporte
+  </button>
+
+  <button class="reset-btn" onclick="resetAlbum()">
+    Reiniciar Álbum
+  </button>
+
+</section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
